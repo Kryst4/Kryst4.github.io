@@ -38,7 +38,6 @@ $(function() {
 
 	//导航页内容显示与消失
 	var flag = true;
-	var index = 0;
 	$('#nav .nav .nav-list>li:lt(7)').hover(function() {
 		if (flag) {
 			$(this).find('.nav-content-item').stop(true).slideDown(200);
@@ -47,11 +46,10 @@ $(function() {
 			$(this).find('.nav-content-item').stop(true).show();
 		}
 	}, function() {
-		index = $(this).index();
 		$(this).find('.nav-content-item').stop(true).hide();
 	});
 	$('#nav .nav .nav-list').mouseleave(function() {
-			$('#nav .nav .nav-list>li').eq(index).find('.nav-content-item').stop(true).show().delay(200).slideUp(200);
+			$('#nav .nav .nav-list>li').find('.nav-content-item').stop(true).hide();
 			flag = true;
 		})
 		//banner轮播
