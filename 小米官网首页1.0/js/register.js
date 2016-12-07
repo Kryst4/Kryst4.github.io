@@ -69,10 +69,7 @@ $(function(){
 	
 	$('#register .register-bottom p a').click(function(){
 		$(this).addClass('current').siblings().removeClass('current');
-	})
-	
-	
-	
+	});
 	
 	
 	

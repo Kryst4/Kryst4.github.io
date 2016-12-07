@@ -37,21 +37,21 @@ $(function() {
 	$('#nav .nav .nav-list .nav-content-item').css('width', widthL);
 
 	//导航页内容显示与消失
-	var flag = true;
-	$('#nav .nav .nav-list>li:lt(7)').hover(function() {
-		if (flag) {
-			$(this).find('.nav-content-item').stop(true).slideDown(200);
-			flag = false;
-		} else {
-			$(this).find('.nav-content-item').stop(true).show();
-		}
-	}, function() {
-		$(this).find('.nav-content-item').stop(true).hide();
-	});
-	$('#nav .nav .nav-list').mouseleave(function() {
-			$('#nav .nav .nav-list>li').find('.nav-content-item').stop(true).hide();
-			flag = true;
-		})
+//	var flag = true;
+//	$('#nav .nav .nav-list>li:lt(7)').hover(function() {
+//		if (flag) {
+//			$(this).find('.nav-content-item').stop(true).slideDown(200);
+//			flag = false;
+//		} else {
+//			$(this).find('.nav-content-item').stop(true).show();
+//		}
+//	}, function() {
+//		$(this).find('.nav-content-item').stop(true).hide();
+//	});
+//	$('#nav .nav .nav-list').mouseleave(function() {
+//			$('#nav .nav .nav-list>li').find('.nav-content-item').stop(true).hide();
+//			flag = true;
+//		})
 		//banner轮播
 		var box = new Box($('#banner .container1'));
 		box.interval = 5000;
