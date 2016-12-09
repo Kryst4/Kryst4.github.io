@@ -27,12 +27,86 @@ $(function(){
 		$('#content .content-item .content-item-info .type .suit .suit-item').show();
 		$('#content .content-item .content-item-info .choosedtype').html(val1+val2+'&nbsp;'+price+'</br>'+val3);
 	});
-
-	$('#content .content-item .content-item-info .buy').click(function(){
-		alert('已加入购物车')
-	})
+	var detail = {
+		goodsid: $('#nav .nav .active a').attr('goods-id'),
+		Li: $('#nav .nav li'),
+		Buy: $('#content .content-item .content-item-info .buy'),
+		goodstype:$('#content .phonetype').find('.border').attr('goods-type'),
+		typeLi:$('#content .phonetype li'),
+		goodscolor:$('#content ul.color').find('.border').attr('goods-color'),
+		colorLi:$('#content .color li'),
+		Buy: $('#content .content-item .content-item-info .buy'),
+		data: {},
+		count: 1,
+		onlyId:0,
+		init:function(){
+			this.onlyId = this.goodsid+this.goodstype+this.goodscolor;
+			console.log(this.goodsid);
+			console.log(this.goodscolor);
+			this.initData();
+			this.Liclick();
+			this.goodsType();
+			this.goodsColor();
+			this.buyClick();
+		},
+		initData:function(){
+			var that = this;
+			$.getJSON('js/data.json',function(data){
+				that.data = data[that.goodsid]
+				console.log(that.data);
+				console.log(data);
+				
+			})
+		},
+		Liclick:function(){
+			var that = this;
+			that.Li.click(function(){
+				that.goodsid = $(this).find('a').attr('goods-id');
+				that.onlyId = that.goodsid+that.goodstype+that.goodscolor;
+				console.log(that.goodsid)
+			})
+		},
+		goodsType:function(){
+			var that = this;
+			that.typeLi.click(function(){
+				that.goodstype = $(this).attr('goods-type');
+				that.onlyId = that.goodsid+that.goodstype+that.goodscolor;
+				console.log(that.goodstype)
+			})
+		},
+		goodsColor:function(){
+			var that = this;
+			that.colorLi.click(function(){
+			
+				that.goodscolor = $(this).attr('goods-color');
+				that.onlyId = that.goodsid+that.goodstype+that.goodscolor;
+				console.log(that.goodscolor);
+			})
+		},
+		buyClick:function(){
+			
+			var that = this;
+			that.Buy.click(function(){
+				alert('已加入购物车')
+				var cart = $.cookie('mi_cart')||"{}";
+				cart = JSON.parse(cart);
+				if(cart[that.onlyId]){
+					cart[that.onlyId].count ++;	
+				}else{
+					cart[that.onlyId] = {
+						"goods-id":that.goodsid,
+						"count":parseInt(that.count),
+						"goods-type":that.goodstype,
+						"goods-color":that.goodscolor
+					}
+				}
+				$.cookie('mi_cart',JSON.stringify(cart),{expires:365,path:"/"});
+				console.log(cart);
+			})
+		}
+	}
 	
-	
+	detail.init();
 	
 	
 	
