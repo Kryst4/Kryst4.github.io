@@ -1,0 +1,154 @@
+html,body,div,img,h2,p{
+	margin: 0;
+	padding: 0;
+}
+html,body,.swiper-container,.swiper-wrapper{
+	width: 100%;
+	height: 100%;
+}
+.swiper-slide{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+@keyframes bounc {
+    0% { top: 94%;}
+    100% {top: 92%;}
+}
+.bounc{
+	height: auto;
+    width: 25px;
+    position: absolute;
+    left: 50%;
+    top: 94%;
+    margin-left: -12px;
+    animation: bounc 0.5s linear infinite alternate;
+}
+.border{
+	border-right: solid 1px #ccc;
+}
+.first{
+	background: #083846;
+}
+.first img:nth-child(1){
+    height: auto;
+    width: 248px;
+    position: absolute;
+    left: 50%;
+    top: 1%;
+    margin-left: -124px;
+}
+.first img:nth-child(2){
+	height: auto;
+    width: 185px;
+    position: absolute;
+    left: 50%;
+    top: 62%;
+    margin-left: -92px;
+}
+#second{
+	width: 100%;
+	height: 100%;
+}
+#second .swiper-slide{
+	background: #9261BF;
+}
+.second .one img:nth-child(1){
+	height: auto;
+    width: 158px;
+    position: absolute;
+    left: 50%;
+    top: 2%;
+    margin-left: -79px;
+    z-index: 2;
+}
+.second .one img:nth-child(2){
+    height: auto;
+    width: 240px;
+    position: absolute;
+    left: 50%;
+    top: 28%;
+    margin-left: -120px;
+}
+.second .one img:nth-child(3){
+    height: auto;
+    width: 241px;
+    position: absolute;
+    left: 50%;
+    top: 36%;
+    margin-left: -120px;
+}
+.second .one img:nth-child(4){
+    height: auto;
+    width: 20px;
+    position: absolute;
+    left: 50%;
+    top: 87%;
+    margin-left: -10px;
+}
+.second .one img:nth-child(5){
+    height: auto;
+    width: 142px;
+    position: absolute;
+    left: 50%;
+    top: 82%;
+    margin-left: -71px;
+}
+.second .two img:nth-child(1){
+    height: auto;
+    width: 293px;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    margin-left: -146px;
+}
+.second .two img:nth-child(2){
+    height: auto;
+    width: 260px;
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    margin-left: -130px;
+}
+.second .two img:nth-child(3){
+    height: auto;
+    width: 20px;
+    position: absolute;
+    left: 50%;
+    top: 87%;
+    margin-left: -10px;
+}
+#third{
+	width: 100%;
+	height: 100%;
+}
+#third .swiper-slide{
+	background: #F3533C;
+}
+#fouth{
+	width: 100%;
+	height: 100%;
+}
+#fouth .swiper-slide{
+	background: #FFBF50;
+}
+.five{
+	background: #083846;
+}
+.five img:nth-child(1){
+    height: auto;
+    width: 280px;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    margin-left: -140px;
+
+}
+.five img:nth-child(2){
+    height: auto;
+    width: 260px;
+    position: absolute;
+    left: 50%;
+    top: 67%;
+    margin-left: -130px;
+}

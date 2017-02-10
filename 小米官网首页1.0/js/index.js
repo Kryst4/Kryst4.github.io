@@ -42,14 +42,14 @@ $(function() {
 //		if (flag) {
 //			$(this).find('.nav-content-item').stop(true).slideDown(200);
 //			flag = false;
-//		} else {
+//		} 
+//		else {
 //			$(this).find('.nav-content-item').stop(true).show();
 //		}
 //	}, function() {
 //		$(this).find('.nav-content-item').stop(true).hide();
 //	});
 //	$('#nav .nav .nav-list').mouseleave(function() {
-//			$('#nav .nav .nav-list>li').find('.nav-content-item').stop(true).hide();
 //			flag = true;
 //		})
 		//banner轮播

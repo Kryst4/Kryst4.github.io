@@ -295,8 +295,8 @@ $(function(){
 			var price = parseFloat(goodsItem.find('.gprice').html() );
 			var totalMoneyBox = goodsItem.find('.gtotal');
 			//重新显示单价商品总价
-			this.totalmoney = ( parseInt(input.val()) * price ).toFixed(2)
-			totalMoneyBox.html( totalMoney );
+			this.totalmoney = ( parseInt(input.val()) * price );
+			totalMoneyBox.html( this.totalmoney );
 			
 			//重新给cart中的数量赋值
 			this.cart[onlyId].count = parseInt( input.val() );
